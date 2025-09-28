@@ -1,0 +1,14 @@
+/* Use Bootstrap's CSS variables for theme-agnostic colors */
+header {
+    border-bottom: 2px solid var(--bs-border-color);
+}
+
+.nav-link {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: var(--bs-primary);
+    color: white;
+    border-radius: 0.25rem;
+}
