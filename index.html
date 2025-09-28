@@ -24,13 +24,17 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
             <a class="navbar-brand" href="#">Kevin Zorro</a>
-            <div class="displayflex" id="navContent">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#">About me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
 
                 <!-- Desplegable para idiomas -->
@@ -53,30 +57,63 @@
     </header>
 
     <main class="container mt-4">
-        <h1>About me</h1>
+        <h1 id="about">About me</h1>
         <section>
             <p>Hello! I'm Kevin Zorro, an Engineer of systems passionate about machine learning, competitive programming, and big data. I have academic experience in some projects.</p>
         </section>
 
-        <h1>Projects</h1>
+        <h1 id="projects">Projects</h1>
         <section>
-            <ul>
-                <li>
-                    <strong>Studybara</strong> - Studybara is a web application designed to support organizing your subjects, classes, and study resources efficiently. Accessible from any device.
-                    <p>Technologies: HTML, CSS, React</p>
-                    <p>What I learned: I worked in a team of two people using Scrum methodology. I learned to use React for the front end and Firebase for the back end (non-structured database, hosting, analytics, and deployment).</p>
-                </li>
-            </ul>
+            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Studybara</h5>
+                                <p class="card-text">Studybara is a web application designed to support organizing your subjects, classes, and study resources efficiently. Accessible from any device.</p>
+                                <p class="card-text"><small class="text-muted">Technologies: HTML, CSS, React</small></p>
+                                <p class="card-text"><small class="text-muted">What I learned: I worked in a team of two people using Scrum methodology. I learned to use React for the front end and Firebase for the back end (non-structured database, hosting, analytics, and deployment).</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project 2</h5>
+                                <p class="card-text">Description of the second project.</p>
+                                <p class="card-text"><small class="text-muted">Technologies: ...</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project 3</h5>
+                                <p class="card-text">Description of the third project.</p>
+                                <p class="card-text"><small class="text-muted">Technologies: ...</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
 
-        <h1>Education</h1>
+        <h1 id="education">Education</h1>
         <section>
             <ul>
                 <li><strong>Engineer of systems</strong> - Universidad Francisco de Paula Santander, 2021 - Present</li>
             </ul>
         </section>
 
-        <h1>Skills</h1>
+        <h1 id="skills">Skills</h1>
         <section>
             <ul>
                 <li>Programming languages: Python, Java, C++</li>
@@ -86,10 +123,18 @@
                 <li>Tools: Firebase, GitHub</li>
             </ul>
         </section>
+
+        <h1 id="certificates">Certificates</h1>
+        <section>
+            <ul>
+                <li><strong>Certificate Name</strong> - Issuing Organization, Year</li>
+                <li>Placeholder for another certificate...</li>
+            </ul>
+        </section>
     </main>
 
     <footer class="text-center mt-5 mb-4">
-        <h1>Contact</h1>
+        <h1 id="contact">Contact</h1>
         <p>Email: kevindavidzorro@gmail.com</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/kevin-david-zorro-hernandez-803932200/">linkedin.com/in/kevin-zorro-8b4b79223/</a></p>
         <p>GitHub: <a href="https://github.com/KevinZorro/">github.com/KevinZorro/</a></p>
