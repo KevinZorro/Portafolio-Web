@@ -1,60 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* Línea separadora debajo del header */
+        header {
+            border-bottom: 2px solid #dee2e6;
+        }
+        /* Efecto iluminación hover para enlaces de nav */
+        .nav-link {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .nav-link:hover {
+            color: white;
+            border-radius: 0.25rem;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">About me</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+            <a class="navbar-brand" href="#">Kevin Zorro</a>
+            <div class="displayflex" id="navContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">About me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+
+                <!-- Desplegable para idiomas -->
+                <div class="dropdown me-3">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Language
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('es')">Español</a></li>
+                    </ul>
+                </div>
+
+                <!-- Botón para modo oscuro/claro -->
+                <button id="darkModeToggle" class="btn btn-outline-secondary" aria-label="Toggle dark mode">
+                    🌙
+                </button>
+            </div>
         </nav>
     </header>
-    <H1>About me</H1>
-    <section>
-        <p>Hello! I'm kevin Zorro, a Engineer of sistems with a passion for machine learning, problems of programation competitives and big data. I have experience academic to some project.</p>
-    </section>
-    <H1>Projects</H1>  
-    <section>
-        <ul>
-            <li><strong>Studybara</strong>Studybara is an aplication web design to suport you to organize your subjets, class and resourses of study in a efective form. All in one site, access from any device.
-                <p> html, css, react</p>
-                <p> what i learn?
-                    i work in a team of 2 people, using a metodologi scrum, i learn to use react for the front end, and firebase for the back end (data base no structuraded, hosting, Analysis, and deplayment).
-                </p>
-        </ul>
-    </section>
-    <H1>Education</H1>
-    <section>
-        <ul>
-            <li><strong>Engineer of sistems</strong>Universidad Franscisco de paula Santander, 2021 - Present</li>
-        </ul>
-    </section>
-    <H1>Skills</H1>
-    <section>
-        <ul>
-            <li>Programming languages: Python, Java, C++</li>
-            <li>Data Analysis: Pandas, NumPy, PowerBy</li>
-            <li>Web Development: HTML, CSS, JavaScript</li>
-            <li>FrameWorks: Bootstrap, react</li>
-            <li>tools: Firebase, GitHub</li>
-        </ul>
-    </section>
-    
-    <footer>
+
+    <main class="container mt-4">
+        <h1>About me</h1>
+        <section>
+            <p>Hello! I'm Kevin Zorro, an Engineer of systems passionate about machine learning, competitive programming, and big data. I have academic experience in some projects.</p>
+        </section>
+
+        <h1>Projects</h1>
+        <section>
+            <ul>
+                <li>
+                    <strong>Studybara</strong> - Studybara is a web application designed to support organizing your subjects, classes, and study resources efficiently. Accessible from any device.
+                    <p>Technologies: HTML, CSS, React</p>
+                    <p>What I learned: I worked in a team of two people using Scrum methodology. I learned to use React for the front end and Firebase for the back end (non-structured database, hosting, analytics, and deployment).</p>
+                </li>
+            </ul>
+        </section>
+
+        <h1>Education</h1>
+        <section>
+            <ul>
+                <li><strong>Engineer of systems</strong> - Universidad Francisco de Paula Santander, 2021 - Present</li>
+            </ul>
+        </section>
+
+        <h1>Skills</h1>
+        <section>
+            <ul>
+                <li>Programming languages: Python, Java, C++</li>
+                <li>Data Analysis: Pandas, NumPy, PowerBi</li>
+                <li>Web Development: HTML, CSS, JavaScript</li>
+                <li>Frameworks: Bootstrap, React</li>
+                <li>Tools: Firebase, GitHub</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="text-center mt-5 mb-4">
         <h1>Contact</h1>
-        <p>Email:kevindavidzorro@gmail.com </p>
+        <p>Email: kevindavidzorro@gmail.com</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/kevin-david-zorro-hernandez-803932200/">linkedin.com/in/kevin-zorro-8b4b79223/</a></p>
         <p>GitHub: <a href="https://github.com/KevinZorro/">github.com/KevinZorro/</a></p>
         <p>Whatsapp: +57 3172969155</p>
-        <p>© 2024 Your Name. All rights reserved.</p>
+        <p>© 2024 Kevin Zorro. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function changeLanguage(lang) {
+            alert('Language changed to: ' + (lang === 'en' ? 'English' : 'Español'));
+            // Aquí puedes agregar código para cambiar textos dinámicamente o recargar página con idioma cambiado
+        }
+
+        const toggleButton = document.getElementById('darkModeToggle');
+        toggleButton.addEventListener('click', () => {
+            const htmlElement = document.documentElement;
+            if(htmlElement.getAttribute('data-bs-theme') === 'dark'){
+                htmlElement.setAttribute('data-bs-theme', 'light');
+                toggleButton.textContent = '🌙'; // luna para modo oscuro
+            } else {
+                htmlElement.setAttribute('data-bs-theme', 'dark');
+                toggleButton.textContent = '☀️'; // sol para modo claro
+            }
+        });
+    </script>
 </body>
 </html>
