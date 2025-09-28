@@ -5,20 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-        /* Línea separadora debajo del header */
-        header {
-            border-bottom: 2px solid #dee2e6;
-        }
-        /* Efecto iluminación hover para enlaces de nav */
-        .nav-link {
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .nav-link:hover {
-            color: white;
-            border-radius: 0.25rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
@@ -29,26 +16,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-translate="aboutMe">About me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects" data-translate="projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education" data-translate="education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills" data-translate="skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates" data-translate="certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-translate="contact">Contact</a></li>
                 </ul>
 
-                <!-- Desplegable para idiomas -->
                 <div class="dropdown me-3">
-                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-translate="language">
                         Language
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('es')">Español</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')" data-translate="english">English</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('es')" data-translate="spanish">Español</a></li>
                     </ul>
                 </div>
 
-                <!-- Botón para modo oscuro/claro -->
                 <button id="darkModeToggle" class="btn btn-outline-secondary" aria-label="Toggle dark mode">
                     🌙
                 </button>
@@ -57,40 +42,40 @@
     </header>
 
     <main class="container mt-4">
-        <h1 id="about">About me</h1>
+        <h1 id="about" data-translate="aboutTitle">About me</h1>
         <section>
-            <p>Hello! I'm Kevin Zorro, an Engineer of systems passionate about machine learning, competitive programming, and big data. I have academic experience in some projects.</p>
+            <p data-translate="aboutText">Hello! I'm Kevin Zorro, an Engineer of systems passionate about machine learning, competitive programming, and big data. I have academic experience in some projects.</p>
         </section>
 
-        <h1 id="projects">Projects</h1>
+        <h1 id="projects" data-translate="projectsTitle">Projects</h1>
         <section>
             <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Studybara</h5>
-                                <p class="card-text">Studybara is a web application designed to support organizing your subjects, classes, and study resources efficiently. Accessible from any device.</p>
-                                <p class="card-text"><small class="text-muted">Technologies: HTML, CSS, React</small></p>
-                                <p class="card-text"><small class="text-muted">What I learned: I worked in a team of two people using Scrum methodology. I learned to use React for the front end and Firebase for the back end (non-structured database, hosting, analytics, and deployment).</small></p>
+                                <h5 class="card-title" data-translate="studybaraTitle">Studybara</h5>
+                                <p class="card-text" data-translate="studybaraDescription">Studybara is a web application designed to support organizing your subjects, classes, and study resources efficiently. Accessible from any device.</p>
+                                <p class="card-text"><small class="text-muted" data-translate="studybaraTech">Technologies: HTML, CSS, React</small></p>
+                                <p class="card-text"><small class="text-muted" data-translate="studybaraLearned">What I learned: I worked in a team of two people using Scrum methodology. I learned to use React for the front end and Firebase for the back end (non-structured database, hosting, analytics, and deployment).</small></p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Project 2</h5>
-                                <p class="card-text">Description of the second project.</p>
-                                <p class="card-text"><small class="text-muted">Technologies: ...</small></p>
+                                <h5 class="card-title" data-translate="project2Title">Project 2</h5>
+                                <p class="card-text" data-translate="project2Description">Description of the second project.</p>
+                                <p class="card-text"><small class="text-muted" data-translate="project2Tech">Technologies: ...</small></p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Project 3</h5>
-                                <p class="card-text">Description of the third project.</p>
-                                <p class="card-text"><small class="text-muted">Technologies: ...</small></p>
+                                <h5 class="card-title" data-translate="project3Title">Project 3</h5>
+                                <p class="card-text" data-translate="project3Description">Description of the third project.</p>
+                                <p class="card-text"><small class="text-muted" data-translate="project3Tech">Technologies: ...</small></p>
                             </div>
                         </div>
                     </div>
@@ -106,59 +91,75 @@
             </div>
         </section>
 
-        <h1 id="education">Education</h1>
+        <h1 id="education" data-translate="educationTitle">Education</h1>
         <section>
             <ul>
-                <li><strong>Engineer of systems</strong> - Universidad Francisco de Paula Santander, 2021 - Present</li>
+                <li data-translate="educationText"><strong>Engineer of systems</strong> - Universidad Francisco de Paula Santander, 2021 - Present</li>
             </ul>
         </section>
 
-        <h1 id="skills">Skills</h1>
+        <h1 id="skills" data-translate="skillsTitle">Skills</h1>
         <section>
             <ul>
-                <li>Programming languages: Python, Java, C++</li>
-                <li>Data Analysis: Pandas, NumPy, PowerBi</li>
-                <li>Web Development: HTML, CSS, JavaScript</li>
-                <li>Frameworks: Bootstrap, React</li>
-                <li>Tools: Firebase, GitHub</li>
+                <li data-translate="skillsLanguages">Programming languages: Python, Java, C++</li>
+                <li data-translate="skillsData">Data Analysis: Pandas, NumPy, PowerBi</li>
+                <li data-translate="skillsWeb">Web Development: HTML, CSS, JavaScript</li>
+                <li data-translate="skillsFrameworks">Frameworks: Bootstrap, React</li>
+                <li data-translate="skillsTools">Tools: Firebase, GitHub</li>
             </ul>
         </section>
 
-        <h1 id="certificates">Certificates</h1>
+        <h1 id="certificates" data-translate="certificatesTitle">Certificates</h1>
         <section>
             <ul>
-                <li><strong>Certificate Name</strong> - Issuing Organization, Year</li>
-                <li>Placeholder for another certificate...</li>
+                <li data-translate="certificate1"><strong>Certificate Name</strong> - Issuing Organization, Year</li>
+                <li data-translate="certificate2">Placeholder for another certificate...</li>
             </ul>
         </section>
     </main>
 
     <footer class="text-center mt-5 mb-4">
-        <h1 id="contact">Contact</h1>
-        <p>Email: kevindavidzorro@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/kevin-david-zorro-hernandez-803932200/">linkedin.com/in/kevin-zorro-8b4b79223/</a></p>
-        <p>GitHub: <a href="https://github.com/KevinZorro/">github.com/KevinZorro/</a></p>
-        <p>Whatsapp: +57 3172969155</p>
-        <p>© 2024 Kevin Zorro. All rights reserved.</p>
+        <h1 id="contact" data-translate="contactTitle">Contact</h1>
+        <p data-translate="contactEmail">Email: kevindavidzorro@gmail.com</p>
+        <p data-translate="contactLinkedIn">LinkedIn: <a href="https://www.linkedin.com/in/kevin-david-zorro-hernandez-803932200/">linkedin.com/in/kevin-zorro-8b4b79223/</a></p>
+        <p data-translate="contactGitHub">GitHub: <a href="https://github.com/KevinZorro/">github.com/KevinZorro/</a></p>
+        <p data-translate="contactWhatsapp">Whatsapp: +57 3172969155</p>
+        <p data-translate="copyright">© 2024 Kevin Zorro. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="translations.js"></script>
     <script>
         function changeLanguage(lang) {
-            alert('Language changed to: ' + (lang === 'en' ? 'English' : 'Español'));
-            // Aquí puedes agregar código para cambiar textos dinámicamente o recargar página con idioma cambiado
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
         }
 
         const toggleButton = document.getElementById('darkModeToggle');
+        const navbar = document.querySelector('.navbar');
         toggleButton.addEventListener('click', () => {
             const htmlElement = document.documentElement;
-            if(htmlElement.getAttribute('data-bs-theme') === 'dark'){
+            if (htmlElement.getAttribute('data-bs-theme') === 'dark') {
                 htmlElement.setAttribute('data-bs-theme', 'light');
-                toggleButton.textContent = '🌙'; // luna para modo oscuro
+                toggleButton.textContent = '🌙';
+                navbar.classList.replace('bg-dark', 'bg-light');
+                navbar.classList.replace('navbar-dark', 'navbar-light');
             } else {
                 htmlElement.setAttribute('data-bs-theme', 'dark');
-                toggleButton.textContent = '☀️'; // sol para modo claro
+                toggleButton.textContent = '☀️';
+                navbar.classList.replace('bg-light', 'bg-dark');
+                navbar.classList.replace('navbar-light', 'navbar-dark');
             }
+        });
+
+        // Set default language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            changeLanguage('en');
         });
     </script>
 </body>
